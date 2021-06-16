@@ -39,3 +39,18 @@ The circuit files in this repository:
   - Add the `sub` (register) instruction: [`9_implement_sub.circ`](9_implement_sub.circ)
   - Add the `sub` (immediate) instruction: [`10_implement_sub_imm.circ`](10_implement_sub_imm.circ)
   - Fix the offset for `ldur` and `stur`: [`11_fixldursturoffset.circ`](11_fixldursturoffset.circ)
+- Physical lab
+  - LED Blink circuit: [`led_blink.circ`](led_blink.circ)
+    - Improved ARMv8 datapath with subcircuits
+    - Added LED outputs and subcircuit layouts for easy debugging
+    - Added instructions: `bl`, `cbnz`, `ldur` (word), `stur` (word), `lsl`, `lsr`
+    - Added PC resetting to `0080_0000` (the program starting address for Raspberry Pi 3)
+    - Added a memory controller with peripheral addresses starting at `3F00_0000` (matching Raspberry Pi 3)
+    - Added a GPIO peripheral at address `3F20_0000` (matching BCM2837 of Raspberry Pi 3)
+    - Added BCM2837 GPIO registers: `GPFSELn`, `GPSETn`, `GPCLRn`
+  - Datapath improvements: [`added_sp_br_flags_adds_subs_ands_bcond.circ`](added_sp_br_flags_adds_subs_ands_bcond.circ)
+    - Added proper handling of `SP` register
+    - Added flags register used in conditional branching
+    - Added flag-setting variants: `adds`, `subs`, `ands`
+    - Added indirect branch instruction: `br`
+    - Added flag-based conditional branch instructions: `b.cond`
