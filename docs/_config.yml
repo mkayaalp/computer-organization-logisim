@@ -6,6 +6,7 @@ edit_url_template: "https://github.com/mkayaalp/computer-organization-logisim/ed
 
 prologues:
   - path: index.md
+  - path: chapters/getting-started.md
 chapters:
 
 # Build settings
