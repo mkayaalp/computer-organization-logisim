@@ -8,6 +8,7 @@ prologues:
   - path: index.md
   - path: chapters/getting-started.md
 chapters:
+  - path: chapters/logic-design-review.md
 
 # Build settings
 theme: minima
