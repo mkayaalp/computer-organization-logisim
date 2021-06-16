@@ -15,6 +15,7 @@ chapters:
       - path: chapters/synchronous.md
       - path: chapters/propagation-clock.md
       - path: chapters/tristate.md
+  - path: chapters/combinational-vs-pipelined-multiplier.md
 
 # Build settings
 theme: minima
