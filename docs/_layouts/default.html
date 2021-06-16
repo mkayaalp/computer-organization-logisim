@@ -58,12 +58,12 @@
           <nav class="nav-wrapper" aria-label="Page navigation">
             <!-- Mobile navigation buttons -->
             {%- if page_prev -%}
-            <a rel="prev" href="{{ page_prev.url }}" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+            <a rel="prev" href="{{ site.baseurl }}/{{ page_prev.url }}" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
               <i class="fa fa-angle-left"></i>
             </a>
             {%- endif -%}
             {%- if page_next -%}
-            <a rel="next" href="{{ page_next.url }}" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+            <a rel="next" href="{{ site.baseurl }}/{{ page_next.url }}" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
               <i class="fa fa-angle-right"></i>
             </a>
             {%- endif -%}
@@ -73,12 +73,12 @@
       </div>
       <nav class="nav-wide-wrapper" aria-label="Page navigation">
         {%- if page_prev -%}
-        <a rel="prev" href="{{ page_prev.url }}" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+        <a rel="prev" href="{{ site.baseurl }}/{{ page_prev.url }}" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
           <i class="fa fa-angle-left"></i>
         </a>
         {%- endif -%}
         {%- if page_next -%}
-        <a rel="next" href="{{ page_next.url }}" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+        <a rel="next" href="{{ site.baseurl }}/{{ page_next.url }}" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
           <i class="fa fa-angle-right"></i>
         </a>
         {%- endif -%}
