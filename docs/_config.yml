@@ -9,6 +9,11 @@ prologues:
   - path: chapters/getting-started.md
 chapters:
   - path: chapters/logic-design-review.md
+    sections:
+      - path: chapters/combinational.md
+      - path: chapters/sequential.md
+      - path: chapters/synchronous.md
+      - path: chapters/propagation-clock.md
 
 # Build settings
 theme: minima
