@@ -54,3 +54,15 @@ The circuit files in this repository:
     - Added flag-setting variants: `adds`, `subs`, `ands`
     - Added indirect branch instruction: `br`
     - Added flag-based conditional branch instructions: `b.cond`
+  - More instructions: [`added_imms_mul_div_accesssize_varshift.circ`](added_imms_mul_div_accesssize_varshift.circ)
+    - Added logical immediate encoding
+    - Added wide-immediate instructions: `movz`, `movk`, `movn`
+    - Added variable logical shift: `lslv`, `lsrv`
+    - Added multiplication and division: `mul`, `umulh`, `smulh`, `udiv`, `sdiv`
+    - Added half-word- and byte-sized memory access: `ldurh`, `sturh`, `ldurb`, `sturb`
+  - LCD display: [`added_lcd_display.circ`](added_lcd_display.circ)
+    - Added PC-relative address instruction: `adr`
+    - Added an I2C peripheral (send-only) at address `3F80_4000` (matching BSC1 of BCM2837 of Raspberry Pi 3)
+    - Added BCM2837 BSC registers: `C`, `S`, `DLEN`, `ADDR`, `FIFO_DATA`
+    - Added an I2C device (receive-only) (matching the PCF8574 on the LCD backpack)
+    - Added an HD44780 module with a character matrix LCD display
