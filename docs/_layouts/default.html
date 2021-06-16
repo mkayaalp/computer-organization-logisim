@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}" class="sidebar-visible no-js light">
+
+  {%- include head.html -%}
+
+  <body>
+
+    {%- include header.html -%}
+
+    <div id="page-wrapper" class="page-wrapper">
+      <div class="page">
+        <div id="menu-bar-hover-placeholder"></div>
+        <div id="menu-bar" class="menu-bar sticky bordered">
+          <div class="left-buttons">
+            <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+              <i class="fa fa-bars"></i>
+            </button>
+            <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+              <i class="fa fa-paint-brush"></i>
+            </button>
+            <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+              <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+              <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+              <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+              <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+              <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+            </ul>
+          </div>
+          <h1 class="menu-title">{{ site.title }}</h1>
+          <div class="right-buttons">
+            {%- if site.git_repository_url -%}
+            <a href="{{ site.git_repository_url }}" title="Git repository" aria-label="Git repository">
+              <i id="git-repository-button" class="fa fa-github"></i>
+            </a>
+            {%- endif -%}
+            {%- if site.edit_url_template -%}
+            <a href="{{ site.edit_url_template | replace: "[path]", page.path }}" title="Suggest an edit" aria-label="Suggest an edit">
+              <i id="git-edit-button" class="fa fa-edit"></i>
+            </a>
+            {%- endif -%}
+          </div>
+        </div>
+        <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+        <script type="text/javascript">
+          document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+          document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+          Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+            link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+          });
+        </script>
+        <div id="content" class="content">
+          <main>
+            <h1 id="{{ page.title | slugify }}">
+              <a class="header" href="#{{ page.title | slugify }}">{{ page.title | escape }}</a>
+            </h1>
+            {{ content }}
+          </main>
+          <nav class="nav-wrapper" aria-label="Page navigation">
+            <!-- Mobile navigation buttons -->
+            {%- if page_prev -%}
+            <a rel="prev" href="{{ page_prev.url }}" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+              <i class="fa fa-angle-left"></i>
+            </a>
+            {%- endif -%}
+            {%- if page_next -%}
+            <a rel="next" href="{{ page_next.url }}" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+              <i class="fa fa-angle-right"></i>
+            </a>
+            {%- endif -%}
+            <div style="clear: both"></div>
+          </nav>
+        </div>
+      </div>
+      <nav class="nav-wide-wrapper" aria-label="Page navigation">
+        {%- if page_prev -%}
+        <a rel="prev" href="{{ page_prev.url }}" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+          <i class="fa fa-angle-left"></i>
+        </a>
+        {%- endif -%}
+        {%- if page_next -%}
+        <a rel="next" href="{{ page_next.url }}" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+          <i class="fa fa-angle-right"></i>
+        </a>
+        {%- endif -%}
+      </nav>
+    </div>
+
+    {%- include footer.html -%}
+
+  </body>
+
+</html>
