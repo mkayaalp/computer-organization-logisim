@@ -27,4 +27,15 @@ The circuit files in this repository:
   - Added a conditional branch instruction: [`conditional_branch.circ`](conditional_branch.circ)
   - Added a load (from data memory) instruction: [`load_data_memory.circ`](load_data_memory.circ)
   - Added a store (into data memory) instruction: [`store_data_memory.circ`](store_data_memory.circ)
-
+- Converting the design into ARMv8
+  - Increase register width to 64-bits: [`1_use64bitregs.circ`](1_use64bitregs.circ)
+  - Increase the number of registers to 8: [`2_use8regs.circ`](2_use8regs.circ)
+  - Increase the number of registers to 16: [`3_use16regs.circ`](3_use16regs.circ)
+  - Increase the number of registers to 32: [`4_use32regs.circ`](4_use32regs.circ)
+  - Put registers into a Register File subcircuit: [`5_useregfile.circ`](5_useregfile.circ)
+  - Increase instruction size to 32-bits: [`6_use32bitinstructions.circ`](6_use32bitinstructions.circ)
+  - Use byte-addressed instruction memory: [`7_usebyteaddressedinsmem.circ`](7_usebyteaddressedinsmem.circ)
+  - Use the ARMv8 instruction encoding format: [`8_usearmv8instructionformat.circ`](8_usearmv8instructionformat.circ)
+  - Add the `sub` (register) instruction: [`9_implement_sub.circ`](9_implement_sub.circ)
+  - Add the `sub` (immediate) instruction: [`10_implement_sub_imm.circ`](10_implement_sub_imm.circ)
+  - Fix the offset for `ldur` and `stur`: [`11_fixldursturoffset.circ`](11_fixldursturoffset.circ)
