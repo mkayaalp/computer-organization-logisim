@@ -16,6 +16,15 @@ chapters:
       - path: chapters/propagation-clock.md
       - path: chapters/tristate.md
   - path: chapters/combinational-vs-pipelined-multiplier.md
+  - path: chapters/stored-program-computer.md
+    sections:
+      - path: chapters/four-bit-accumulator.md
+      - path: chapters/three-operands.md
+      - path: chapters/instruction-register.md
+      - path: chapters/instruction-memory.md
+      - path: chapters/branching.md
+      - path: chapters/data-memory.md
+
 
 # Build settings
 theme: minima
