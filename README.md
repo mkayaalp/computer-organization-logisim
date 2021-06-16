@@ -1,7 +1,7 @@
 # computer-organization-logisim
 Logisim designs for teaching computer organization
 
-See [mkayaalp.net/computer-organization-logisim](https://mkayaalp.net/computer-organization/logisim) for details.
+See [mkayaalp.net/computer-organization-logisim](https://mkayaalp.net/computer-organization-logisim) for details.
 
 The circuit files in this repository:
 
