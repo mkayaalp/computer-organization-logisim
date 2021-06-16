@@ -11,3 +11,5 @@ The circuit files in this repository:
 - Propagation delay example (five-bit D flip-flop counter: [`propagation.circ`](propagation.circ)
 - Tristate buffer and multiplexer example: [`tristate_mux.circ`](tristate_mux.circ)
 - 4-to-1 multiplexer: [`mux4.circ`](mux4.circ)
+- Combinational 3-bit multiplier: [`combinational_multiplier.circ`](combinational_multiplier.circ)
+- Pipelined 3-bit multiplier: [`pipelined_multiplier.circ`](pipelined_multiplier.circ)
