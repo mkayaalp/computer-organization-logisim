@@ -3,6 +3,8 @@ Logisim designs for teaching computer organization
 
 See [mkayaalp.net/computer-organization-logisim](https://mkayaalp.net/computer-organization-logisim) for details.
 
+![Execution of instructions in Logisim circuit](docs/images/execution.gif)
+
 The circuit files in this repository:
 
 - Logic design review examples
