@@ -1,5 +1,14 @@
-# computer-organization-logisim
-Logisim designs for teaching computer organization
+# Computer Organization with Logisim
+Logisim designs for teaching computer organization.
+
+&copy; 2021 Mehmet Kayaalp.
+
+Cite as:
+> Mehmet Kayaalp. 2021.
+Using Logisim-evolution for Teaching Datapath and Control.
+In Proceedings of WCAE ’21:
+Workshop on Computer Architecture Education (WCAE ’21).
+ACM, New York, NY, USA, 8 pages.
 
 See [mkayaalp.net/computer-organization-logisim](https://mkayaalp.net/computer-organization-logisim) for details.
 
