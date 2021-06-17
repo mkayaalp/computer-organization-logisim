@@ -66,3 +66,4 @@ The circuit files in this repository:
     - Added BCM2837 BSC registers: `C`, `S`, `DLEN`, `ADDR`, `FIFO_DATA`
     - Added an I2C device (receive-only) (matching the PCF8574 on the LCD backpack)
     - Added an HD44780 module with a character matrix LCD display
+- Pipelined LEGv8 datapath with forwarding unit (no hazard detection or stalling): [`pipeline.circ`](pipeline.circ)
